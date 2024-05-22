@@ -30,6 +30,53 @@
         <servlet-name>UpdateProject</servlet-name>
         <url-pattern>/update</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteProject</servlet-name>
+        <servlet-class>Servlets.DeleteProject</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProject</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddTask</servlet-name>
+        <servlet-class>Servlets.AddTask</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTask</servlet-name>
+        <url-pattern>/AddTask</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetAllTasks</servlet-name>
+        <servlet-class>Servlets.GetAllTasks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetAllTasks</servlet-name>
+        <url-pattern>/GetAllTasks</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteTask</servlet-name>
+        <servlet-class>Servlets.DeleteTask</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTask</servlet-name>
+        <url-pattern>/DeleteTask</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateTask</servlet-name>
+        <servlet-class>Servlets.UpdateTask</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateTask</servlet-name>
+        <url-pattern>/UpdateTask</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

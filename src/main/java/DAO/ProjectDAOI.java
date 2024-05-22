@@ -56,7 +56,6 @@ public class ProjectDAOI implements ProjectDAO {
     @Override
     public void deleteProject(int id) throws SQLException {
         String sql = "DELETE FROM projects WHERE id = ?";
-
         try (Connection connection = DatabaseManager.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
@@ -101,6 +100,4 @@ public class ProjectDAOI implements ProjectDAO {
             statement.executeUpdate();
         }
     }
-
 }
-

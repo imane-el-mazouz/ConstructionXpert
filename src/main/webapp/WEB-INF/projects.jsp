@@ -31,8 +31,14 @@
                 <td>${project.fin}</td>
                 <td>${project.budget}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/delete/${project.id}" class="btn btn-danger">Delete</a>
-                    <a href="${pageContext.request.contextPath}/update/${project.id}" class="btn btn-primary">Update</a>
+                    <form action="delete" method="post" style="display: inline;">
+                        <input type="hidden" name="projectId" value="${project.id}" />
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                    <form action="update" method="get" style="display: inline;">
+                        <input type="hidden" name="projectId" value="${project.id}" />
+                        <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    </form>
                 </td>
             </tr>
         </c:forEach>

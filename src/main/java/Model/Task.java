@@ -1,7 +1,9 @@
 
 package Model;
 
+import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 public class Task {
 
@@ -10,22 +12,23 @@ public class Task {
     private String taskDescription;
     private Date debutTask;
     private Date finTask;
-    private String status;
+    private TacheStatus status;
+    private List<String> resources;
+
     private int id;
 
-    public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, String status, int id) {
+    public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status, List<String> resources, int id) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.taskDescription = taskDescription;
         this.debutTask = debutTask;
         this.finTask = finTask;
         this.status = status;
+        this.resources = resources;
         this.id = id;
     }
 
-    public Task() {
-
-    }
+    public Task() {}
 
     public int getTaskId() {
         return taskId;
@@ -67,12 +70,20 @@ public class Task {
         this.finTask = finTask;
     }
 
-    public String getStatus() {
+    public TacheStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TacheStatus status) {
         this.status = status;
+    }
+
+    public List<String> getResources() {
+        return resources;
+    }
+
+    public void setResources(List<String> resources) {
+        this.resources = resources;
     }
 
     public int getId() {
@@ -81,5 +92,19 @@ public class Task {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "taskId=" + taskId +
+                ", taskName='" + taskName + '\'' +
+                ", taskDescription='" + taskDescription + '\'' +
+                ", debutTask=" + debutTask +
+                ", finTask=" + finTask +
+                ", status=" + status +
+                ", resources=" + resources +
+                ", id=" + id +
+                '}';
     }
 }
