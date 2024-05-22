@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskDAOI implements TaskDAO {
-    private static final String INSERT_TASK_SQL = "INSERT INTO tasks (task_id, task_name, task_dscription, debutTask, finTask, status) VALUES (?, ?, ?, ?, ?, ?);";
+    private static final String INSERT_TASK_SQL = "INSERT INTO tasks (task_name, task_description, debutTask, finTask, status) VALUES (?, ?, ?, ?, ?);";
     private static final String DELETE_TASK_SQL = "DELETE FROM tasks WHERE task_id = ?;";
     private static final String SELECT_TASK_BY_ID_SQL = "SELECT * FROM tasks WHERE task_id = ?;";
     private static final String SELECT_ALL_TASKS_SQL = "SELECT * FROM tasks;";

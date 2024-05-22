@@ -47,12 +47,9 @@ public class AddTask extends HttpServlet {
             Date debutTask = sdf.parse(debutTaskStr);
             Date finTask = sdf.parse(finTaskStr);
 
-            // Creating Task object
             Task task = new Task(taskName, taskDescription, debutTask, finTask, status);
-            // Calling TaskDAO to add the task
             taskDAO.addTask(task);
 
-            // Redirecting after successful addition
             response.sendRedirect(request.getContextPath() + "/GetAllTasks");
 
         } catch (SQLException e) {
