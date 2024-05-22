@@ -9,7 +9,8 @@
 <body>
 <div class="container-fluid d-flex flex-column justify-content-center align-items-center gap-4">
     <h2>All Tasks</h2>
-    <table border="1">
+    <table class="table table-bordered">
+        <thead>
         <tr>
             <th>Task ID</th>
             <th>Task Name</th>
@@ -21,6 +22,8 @@
             <th>Project ID</th>
             <th>Actions</th>
         </tr>
+        </thead>
+        <tbody>
         <c:forEach var="task" items="${tasks}">
             <tr>
                 <td>${task.taskId}</td>
@@ -32,11 +35,13 @@
                 <td>${task.resources}</td>
                 <td>${task.id}</td>
                 <td>
-                    <a href="UpdateTask?taskId=${task.taskId}">Edit</a> |
-                    <a href="DeleteTask?taskId=${task.taskId}" onclick="return confirm('Are you sure?')">Delete</a>
+                    <a href="UpdateTask?taskId=${task.taskId}" class="btn btn-warning">Edit</a>
+                    <a href="DeleteTask?taskId=${task.taskId}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>
+
                 </td>
             </tr>
         </c:forEach>
+        </tbody>
     </table>
     <a href="${pageContext.request.contextPath}/AddTask" class="btn btn-success">Add Task</a>
 </div>

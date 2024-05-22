@@ -43,11 +43,9 @@ public class AddTask extends HttpServlet {
             String[] resourcesArr = request.getParameterValues("resources");
             List<String> resources = resourcesArr != null ? Arrays.asList(resourcesArr) : null;
             int id = Integer.parseInt(request.getParameter("project_id"));
-
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date debutTask = sdf.parse(debutTaskStr);
             Date finTask = sdf.parse(finTaskStr);
-
             Task task = new Task(taskId, taskName, taskDescription, debutTask, finTask, status, resources, id);
             taskDAO.addTask(task);
             response.sendRedirect(request.getContextPath() + "/GetAllTasks");
