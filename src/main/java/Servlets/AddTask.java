@@ -34,23 +34,30 @@ public class AddTask extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            int taskId = Integer.parseInt(request.getParameter("task_id"));
-            String taskName = request.getParameter("task_name");
-            String taskDescription = request.getParameter("task_description");
+            // Retrieving parameters from the request
+//            int taskId = Integer.parseInt(request.getParameter("taskId"));
+            String taskName = request.getParameter("taskName");
+            String taskDescription = request.getParameter("taskDescription");
             String debutTaskStr = request.getParameter("debutTask");
             String finTaskStr = request.getParameter("finTask");
             TacheStatus status = TacheStatus.valueOf(request.getParameter("status").toUpperCase());
-            String[] resourcesArr = request.getParameterValues("resources");
-            List<String> resources = resourcesArr != null ? Arrays.asList(resourcesArr) : null;
-            int id = Integer.parseInt(request.getParameter("project_id"));
+
+            // Parsing dates
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date debutTask = sdf.parse(debutTaskStr);
             Date finTask = sdf.parse(finTaskStr);
-            Task task = new Task(taskId, taskName, taskDescription, debutTask, finTask, status, resources, id);
+
+            // Creating Task object
+            Task task = new Task(taskName, taskDescription, debutTask, finTask, status);
+            // Calling TaskDAO to add the task
             taskDAO.addTask(task);
+
+            // Redirecting after successful addition
             response.sendRedirect(request.getContextPath() + "/GetAllTasks");
-        } catch (NumberFormatException | ParseException | SQLException e) {
-            throw new ServletException("Error processing task addition", e);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
-    }
-}
+    }}

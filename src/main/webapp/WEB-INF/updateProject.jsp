@@ -5,7 +5,7 @@
     <title>Update Task</title>
 </head>
 <body>
-<h2>Update Task</h2>
+<h2>Update Project</h2>
 <form action="<c:url value='/update'/>" method="post">
     <input type="hidden" id="id" name="id" value="${project.id}">
     <label for="nom">Name:</label>

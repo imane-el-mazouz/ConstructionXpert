@@ -12,9 +12,7 @@
 </head>
 <body>
 <h2>Add Task</h2>
-<form action="AddTask" method="post">
-    <label for="taskId">Task ID:</label>
-    <input type="text" id="taskId" name="taskId" required><br><br>
+<form action="AddTask" method="POST">
 
     <label for="taskName">Task Name:</label>
     <input type="text" id="taskName" name="taskName" required><br><br>
@@ -35,11 +33,6 @@
         <option value="DONE">Done</option>
     </select><br><br>
 
-    <label for="resources">Resources (comma separated):</label>
-    <input type="text" id="resources" name="resources"><br><br>
-
-    <label for="id">Project ID:</label>
-    <input type="text" id="id" name="id" required><br><br>
 
     <input type="submit" value="Add Task">
 </form>

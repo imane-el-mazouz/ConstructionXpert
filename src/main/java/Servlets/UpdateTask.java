@@ -41,10 +41,10 @@ public class UpdateTask extends HttpServlet {
         Date debutTask = Date.valueOf(request.getParameter("debutTask"));
         Date finTask = Date.valueOf(request.getParameter("finTask"));
         TacheStatus status = TacheStatus.valueOf(request.getParameter("status").toUpperCase());
-        String[] resourcesArray = request.getParameter("resources").split(",");
-        int id = Integer.parseInt(request.getParameter("id"));
+//        String[] resourcesArray = request.getParameter("resources").split(",");
+//        int id = Integer.parseInt(request.getParameter("id"));
 
-        Task task = new Task(taskId, taskName, taskDescription, debutTask, finTask, status, Arrays.asList(resourcesArray), id);
+        Task task = new Task(taskId, taskName, taskDescription, debutTask, finTask, status);
 
         try {
             taskDAO.updateTask(task);

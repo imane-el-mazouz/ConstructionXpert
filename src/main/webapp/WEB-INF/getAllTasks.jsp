@@ -18,8 +18,6 @@
             <th>Start Date</th>
             <th>End Date</th>
             <th>Status</th>
-            <th>Resources</th>
-            <th>Project ID</th>
             <th>Actions</th>
         </tr>
         </thead>
@@ -32,8 +30,6 @@
                 <td>${task.debutTask}</td>
                 <td>${task.finTask}</td>
                 <td>${task.status}</td>
-                <td>${task.resources}</td>
-                <td>${task.id}</td>
                 <td>
                     <a href="UpdateTask?taskId=${task.taskId}" class="btn btn-warning">Edit</a>
                     <a href="DeleteTask?taskId=${task.taskId}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>

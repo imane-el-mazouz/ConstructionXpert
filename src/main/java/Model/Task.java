@@ -13,19 +13,24 @@ public class Task {
     private Date debutTask;
     private Date finTask;
     private TacheStatus status;
-    private List<String> resources;
+//    private List<String> resources;
 
-    private int id;
-
-    public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status, List<String> resources, int id) {
+    public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.taskDescription = taskDescription;
         this.debutTask = debutTask;
         this.finTask = finTask;
         this.status = status;
-        this.resources = resources;
-        this.id = id;
+//        this.resources = resources;
+    }
+
+    public Task(String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status) {
+        this.taskName = taskName;
+        this.taskDescription = taskDescription;
+        this.debutTask = debutTask;
+        this.finTask = finTask;
+        this.status = status;
     }
 
     public Task() {}
@@ -78,21 +83,14 @@ public class Task {
         this.status = status;
     }
 
-    public List<String> getResources() {
-        return resources;
-    }
+//    public List<String> getResources() {
+//        return resources;
+//    }
 
-    public void setResources(List<String> resources) {
-        this.resources = resources;
-    }
+//    public void setResources(List<String> resources) {
+//        this.resources = resources;
+//    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @Override
     public String toString() {
@@ -103,8 +101,7 @@ public class Task {
                 ", debutTask=" + debutTask +
                 ", finTask=" + finTask +
                 ", status=" + status +
-                ", resources=" + resources +
-                ", id=" + id +
+//                ", resources=" + resources +
                 '}';
     }
 }
