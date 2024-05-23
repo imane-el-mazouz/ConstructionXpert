@@ -213,7 +213,7 @@
         }
 
         body {
-            background-color: white;
+            background-color: #ffcb0f;
 
         }
 
@@ -232,6 +232,7 @@
             padding: 20px 50px;
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #ffcb0f;
         }
 
         .logo {
@@ -241,7 +242,7 @@
         }
 
         .logo div {
-            background-color: blue;
+            background-color: #ffcb0f ;
             color: #fff;
             width: 50px;
             height: 50px;
@@ -256,20 +257,23 @@
         .nav__links {
             display: flex;
             list-style: none;
+            color: black;
+
         }
 
         .nav__links li {
             margin-right: 20px;
+            color: black;
         }
 
         .nav__links li a {
             text-decoration: none;
-            color: #333;
+            color: black;
             transition: color 0.3s ease;
         }
 
         .nav__links li a:hover {
-            color: #FFD700;
+            color: white ;
         }
 
         header {
@@ -343,7 +347,7 @@
         }
 
         button:hover {
-            background-color: blue;
+            background-color: #ffcb0f ;
         }
         footer {
             background-color: black;
@@ -390,7 +394,7 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: blue;
+            background-color: #ffcb0f ;
             color: #000000;
             cursor: pointer;
         }
@@ -411,7 +415,7 @@
         }
 
         .footer__links li a:hover {
-            color: blue;
+            color: #ffcb0f ;
         }
 
         <!--
@@ -433,7 +437,7 @@
             background-color: #f8f9fa;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: blue;
+            color: #ffcb0f ;
         }
 
         .card img {
@@ -451,7 +455,7 @@
         }
 
         .card button {
-            background-color: #007bff;
+            background-color: #ffcb0f ;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -460,7 +464,7 @@
         }
 
         .card button:hover {
-            background-color: #0056b3;
+            background-color: #ffcb0f ;
         }
         .card-header {
             text-align: center;
@@ -482,11 +486,11 @@
 
         .form-control:focus {
             outline: none;
-            border-color: blue;
+            border-color: #ffcb0f ;
         }
 
         button.btn-success {
-            background-color: blue;
+            background-color: #ffcb0f ;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -496,7 +500,7 @@
         }
 
         button.btn-success:hover {
-            background-color: #3498db;
+            background-color: #ffcb0f ;
         }
 
         .text-center {
@@ -545,25 +549,32 @@
     <div class="nav__bar">
         <div class="nav__header">
             <div class="logo nav__logo">
-                <div>D</div>
-                <span>ConstructionExpert</span>
+                <img src="https://media.istockphoto.com/id/1409896133/vector/home-build-illustration-symbol-symbol-design.jpg?s=612x612&w=0&k=20&c=lapiynHCIj-8RJV6rymm2ge_Y3wjeOPo1bkgV7QClw0=" alt="ConstructionExpert Logo" style="max-width: 80px; height: auto;">
             </div>
-
         </div>
         <ul class="nav__links" id="nav-links">
-            <li><a href="#Home">Home</a></li>
+            <li ><a href="#Home">Home</a></li>
             <li><a href="${pageContext.request.contextPath}/listProject">Projects</a></li>
             <li><a href="#menu">Events</a></li>
             <li><a href="#news">Contact</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
+        <div class="nav__header">
+            <div class="logo nav__logo">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png" alt="ConstructionExpert Logo" style="max-width: 50px; height: auto;">
+            </div>
+        </div>
+
     </div>
 </nav>
+
+
 <header id="home">
     <div class="section__container">
-        <h1>Welcome to DiligentCampus </h1>
-        <p>Your Dream Campus</p>
-        <a href="" style="display: inline-block;padding: 10px 20px;background-color: blue;color: #fff;text-decoration: none;border-radius: 5px;transition: background-color 0.3s ease;">Discover More</a>
+        <p style="color:black ">We are Certified Engineers</p>
+        <h1>CONSTRUCTION SERVICES</h1>
+        <h2>CREATIVE & PROFESSIONAL</h2>
+        <a href="" style="display: inline-block;padding: 10px 20px;background-color: #ffcb0f ;color: #fff;text-decoration: none;border-radius: 5px;transition: background-color 0.3s ease;">Discover More</a>
     </div>
 </header>
 
