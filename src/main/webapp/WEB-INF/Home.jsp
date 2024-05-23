@@ -14,7 +14,7 @@
     <!--
       - custom css link
     -->
-    <style><%@include file="/CSS/style.css"%></style>
+    <style><%@include file="CSS/style.css"%></style>
     <link rel="stylesheet" href="CSS/styles.css">
     <!--
       - google font link
@@ -273,7 +273,7 @@
         }
 
         header {
-            background-image: url(https://architecturestudio.fr/wp-content/uploads/2021/07/architecturestudio_BGR1_2-1-2200x1238.jpg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
+            background-image: url(https://www.ilo.org/sites/default/files/2024-03/construction%20hero%20photo%201.jpg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
         ");
         background-size: cover;
             text-align: center;
@@ -546,22 +546,19 @@
         <div class="nav__header">
             <div class="logo nav__logo">
                 <div>D</div>
-                <span>DiligentCampus</span>
+                <span>ConstructionExpert</span>
             </div>
 
         </div>
         <ul class="nav__links" id="nav-links">
             <li><a href="#Home">Home</a></li>
-            <li><a href="allStudent">Student</a></li>
-            <li><a href="#feature">Clubs</a></li>
+            <li><a href="${pageContext.request.contextPath}/listProject">Projects</a></li>
             <li><a href="#menu">Events</a></li>
             <li><a href="#news">Contact</a></li>
-            <li><a href="saveStudent">Save</a></li>
-
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </div>
 </nav>
-
 <header id="home">
     <div class="section__container">
         <h1>Welcome to DiligentCampus </h1>
@@ -576,7 +573,7 @@
         <p>"DiligentCampus is an advanced platform tailored to simplify student management within campus environments. It offers intuitive features enabling students to efficiently track schedules, manage courses, stay updated on campus events, and foster seamless communication with peers and faculty. With a focus on fostering diligence and organization, DiligentCampus is dedicated to empowering students towards academic excellence and enhancing their overall campus experience.</p>
         <div class="card__container">
             <div class="card">
-                <img src="https://i.pinimg.com/564x/a9/3f/45/a93f45071cf49e828b4dafb7ab763fa2.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="">
+                <img src="images/" style="background-size: cover;background-position: center;height: 350px;" alt="">
             </div>
             <div class="card">
                 <img src="https://i.pinimg.com/564x/74/79/1e/74791ea71f360b1bbfaffe7109481d8d.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="">

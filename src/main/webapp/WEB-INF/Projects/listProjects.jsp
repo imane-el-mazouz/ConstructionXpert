@@ -69,7 +69,7 @@
         <a href="${pageContext.request.contextPath}/ListTasksServlet?projectId=${project.pId}" class="task-button">See All Tasks</a>
         <a href="${pageContext.request.contextPath}/UpdateProjectServlet?projectId=${project.pId}" class="update-button">Update</a>
         <a href="${pageContext.request.contextPath}/DeleteProjectServlet?projectId=${project.pId}" class="delete-button" onclick="return confirm('Are you sure you want to delete this project?')">Delete</a>
-      </div>
+      </div>b(
     </div>
   </c:forEach>
 
