@@ -1,107 +1,95 @@
-
 package Model;
 
-import javax.annotation.Resource;
-import java.util.Date;
-import java.util.List;
+import java.sql.Date;
 
 public class Task {
-
-    private int taskId;
-    private String taskName;
-    private String taskDescription;
-    private Date debutTask;
-    private Date finTask;
-    private TacheStatus status;
-//    private List<String> resources;
-
-    public Task(int taskId, String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status) {
-        this.taskId = taskId;
-        this.taskName = taskName;
-        this.taskDescription = taskDescription;
-        this.debutTask = debutTask;
-        this.finTask = finTask;
-        this.status = status;
-//        this.resources = resources;
-    }
-
-    public Task(String taskName, String taskDescription, Date debutTask, Date finTask, TacheStatus status) {
-        this.taskName = taskName;
-        this.taskDescription = taskDescription;
-        this.debutTask = debutTask;
-        this.finTask = finTask;
-        this.status = status;
-    }
+    private int tId;
+    private String tDescription;
+    private String tStartdate;
+    private String tEndDate;
+    private String statut;
+    private String resources;
+    private int pId;
 
     public Task() {}
 
-    public int getTaskId() {
-        return taskId;
+
+    public Task(int tId, String tDescription, String tStartdate, String tEndDate, String statut, String resources, int pId) {
+        this.tId = tId;
+        this.tDescription = tDescription;
+        this.tStartdate = tStartdate;
+        this.tEndDate = tEndDate;
+        this.statut = statut;
+        this.resources = resources;
+        this.pId = pId;
     }
 
-    public void setTaskId(int taskId) {
-        this.taskId = taskId;
+    public int gettId() {
+        return tId;
     }
 
-    public String getTaskName() {
-        return taskName;
+    public void settId(int tId) {
+        this.tId = tId;
     }
 
-    public void setTaskName(String taskName) {
-        this.taskName = taskName;
+    public String gettDescription() {
+        return tDescription;
     }
 
-    public String getTaskDescription() {
-        return taskDescription;
+    public void settDescription(String tDescription) {
+        this.tDescription = tDescription;
     }
 
-    public void setTaskDescription(String taskDescription) {
-        this.taskDescription = taskDescription;
+    public String gettStartdate() {
+        return tStartdate;
     }
 
-    public Date getDebutTask() {
-        return debutTask;
+    public void settStartdate(String tStartdate) {
+        this.tStartdate = tStartdate;
     }
 
-    public void setDebutTask(Date debutTask) {
-        this.debutTask = debutTask;
+    public String gettEndDate() {
+        return tEndDate;
     }
 
-    public Date getFinTask() {
-        return finTask;
+    public void settEndDate(String tEndDate) {
+        this.tEndDate = tEndDate;
     }
 
-    public void setFinTask(Date finTask) {
-        this.finTask = finTask;
+    public String getStatut() {
+        return statut;
     }
 
-    public TacheStatus getStatus() {
-        return status;
+    public void setStatut(String statut) {
+        this.statut = statut;
     }
 
-    public void setStatus(TacheStatus status) {
-        this.status = status;
+    public String getResources() {
+        return resources;
     }
 
-//    public List<String> getResources() {
-//        return resources;
-//    }
+    public void setResources(String resources) {
+        this.resources = resources;
+    }
 
-//    public void setResources(List<String> resources) {
-//        this.resources = resources;
-//    }
+    public int getpId() {
+        return pId;
+    }
 
+    public void setpId(int pId) {
+        this.pId = pId;
+    }
 
     @Override
     public String toString() {
         return "Task{" +
-                "taskId=" + taskId +
-                ", taskName='" + taskName + '\'' +
-                ", taskDescription='" + taskDescription + '\'' +
-                ", debutTask=" + debutTask +
-                ", finTask=" + finTask +
-                ", status=" + status +
-//                ", resources=" + resources +
+                "tId=" + tId +
+                ", tDescription='" + tDescription + '\'' +
+                ", tStartdate=" + tStartdate +
+                ", tEndDate=" + tEndDate +
+                ", statut='" + statut + '\'' +
+                ", resources='" + resources + '\'' +
+                ", pId=" + pId +
                 '}';
     }
 }

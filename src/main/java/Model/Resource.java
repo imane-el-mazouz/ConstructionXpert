@@ -1,47 +1,54 @@
 package Model;
 
 public class Resource {
-    private int resourceId;
-    private String resourceName;
-    private String resourceType;
+    private int rId;
+    private String rName;
+    private String rType;
     private int quantity;
-    private String supplier;
-    private int task_id;
+    private String provider;
+    private int tId;
 
-    public Resource(int resourceId, String resourceName, String resourceType, int quantity, String supplier, int task_id) {
-        this.resourceId = resourceId;
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
+    public Resource() {}
+
+    public Resource(int rId, String rName, String rType, int quantity, String provider, int tId) {
+        this.rId = rId;
+        this.rName = rName;
+        this.rType = rType;
         this.quantity = quantity;
-        this.supplier = supplier;
-        this.task_id = task_id;
+        this.provider = provider;
+        this.tId = tId;
     }
 
-    public Resource() {
+    public Resource(String rName, String rType, int quantity, String provider, int rId) {
+        this.rName = rName;
+        this.rType = rType;
+        this.quantity = quantity;
+        this.provider = provider;
+        this.rId = rId;
     }
 
-    public int getResourceId() {
-        return resourceId;
+    public int getrId() {
+        return rId;
     }
 
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public void setrId(int rId) {
+        this.rId = rId;
     }
 
-    public String getResourceName() {
-        return resourceName;
+    public String getrName() {
+        return rName;
     }
 
-    public void setResourceName(String resourceName) {
-        this.resourceName = resourceName;
+    public void setrName(String rName) {
+        this.rName = rName;
     }
 
-    public String getResourceType() {
-        return resourceType;
+    public String getrType() {
+        return rType;
     }
 
-    public void setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public void setrType(String rType) {
+        this.rType = rType;
     }
 
     public int getQuantity() {
@@ -52,19 +59,19 @@ public class Resource {
         this.quantity = quantity;
     }
 
-    public String getSupplier() {
-        return supplier;
+    public String getProvider() {
+        return provider;
     }
 
-    public void setSupplier(String supplier) {
-        this.supplier = supplier;
+    public void setProvider(String provider) {
+        this.provider = provider;
     }
 
-    public int getTask_id() {
-        return task_id;
+    public int gettId() {
+        return tId;
     }
 
-    public void setTask_id(int task_id) {
-        this.task_id = task_id;
+    public void settId(int tId) {
+        this.tId = tId;
     }
 }

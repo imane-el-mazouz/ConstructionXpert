@@ -3,80 +3,84 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
-    <display-name>ConstructionXpert</display-name>
+
 
     <servlet>
-        <servlet-name>DisplayProject</servlet-name>
-        <servlet-class>Servlets.DisplayProject</servlet-class>
+        <servlet-name>ListProjectsServlet</servlet-name>
+        <servlet-class>Servlet.Projects.ListProjectsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DisplayProject</servlet-name>
-        <url-pattern>/display</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>AddProject</servlet-name>
-        <servlet-class>Servlets.AddProject</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddProject</servlet-name>
-        <url-pattern>/add</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>UpdateProject</servlet-name>
-        <servlet-class>Servlets.UpdateProject</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UpdateProject</servlet-name>
-        <url-pattern>/update</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>DeleteProject</servlet-name>
-        <servlet-class>Servlets.DeleteProject</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeleteProject</servlet-name>
-        <url-pattern>/delete</url-pattern>
+        <servlet-name>ListProjectsServlet</servlet-name>
+        <url-pattern>/listProject</url-pattern>
     </servlet-mapping>
 
 
     <servlet>
-        <servlet-name>AddTask</servlet-name>
-        <servlet-class>Servlets.AddTask</servlet-class>
+        <servlet-name>AddProjectServlet</servlet-name>
+        <servlet-class>Servlet.Projects.AddProjectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddTask</servlet-name>
-        <url-pattern>/AddTask</url-pattern>
+        <servlet-name>AddProjectServlet</servlet-name>
+        <url-pattern>/addProject</url-pattern>
     </servlet-mapping>
 
 
     <servlet>
-        <servlet-name>GetAllTasks</servlet-name>
-        <servlet-class>Servlets.GetAllTasks</servlet-class>
+        <servlet-name>UpdateProjectServlet</servlet-name>
+        <servlet-class>Servlet.Projects.UpdateProjectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>GetAllTasks</servlet-name>
-        <url-pattern>/GetAllTasks</url-pattern>
+        <servlet-name>UpdateProjectServlet</servlet-name>
+        <url-pattern>/updateProject</url-pattern>
     </servlet-mapping>
+
 
     <servlet>
-        <servlet-name>DeleteTask</servlet-name>
-        <servlet-class>Servlets.DeleteTask</servlet-class>
+        <servlet-name>DeleteProjectServlet</servlet-name>
+        <servlet-class>Servlet.Projects.DeleteProjectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DeleteTask</servlet-name>
-        <url-pattern>/DeleteTask</url-pattern>
+        <servlet-name>DeleteProjectServlet</servlet-name>
+        <url-pattern>/deleteProject</url-pattern>
     </servlet-mapping>
+
 
     <servlet>
-        <servlet-name>UpdateTask</servlet-name>
-        <servlet-class>Servlets.UpdateTask</servlet-class>
+        <servlet-name>ListTasksServlet</servlet-name>
+        <servlet-class>Servlet.Tasks.ListTasksServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UpdateTask</servlet-name>
-        <url-pattern>/UpdateTask</url-pattern>
+        <servlet-name>ListTasksServlet</servlet-name>
+        <url-pattern>/listTask</url-pattern>
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>AddTaskServlet</servlet-name>
+        <servlet-class>Servlet.Tasks.AddTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTaskServlet</servlet-name>
+        <url-pattern>/addTask</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ListResourcesServlet</servlet-name>
+        <servlet-class>Servlet.Resources.ListResourcesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListResourcesServlet</servlet-name>
+        <url-pattern>/listResource</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddResourceServlet</servlet-name>
+        <servlet-class>Servlet.Resources.AddResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddResourceServlet</servlet-name>
+        <url-pattern>/addResource</url-pattern>
+    </servlet-mapping>
 </web-app>

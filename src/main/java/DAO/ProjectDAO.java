@@ -5,11 +5,10 @@ import Model.Project;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ProjectDAO {
-    List<Project> getAllProjects() throws SQLException;
+public interface ProjectDao {
     void addProject(Project project) throws SQLException;
-    void deleteProject(int id) throws SQLException;
-    Project getProjectById(int id) throws SQLException;
-    void updateProject(Project project) throws SQLException;
-
+    boolean updateProject(Project project) throws SQLException;
+    void deleteProject(int pId) throws SQLException;
+    List<Project> selectAllProjects() throws SQLException;
+    Project selectProjectById(int pId) throws SQLException;
 }

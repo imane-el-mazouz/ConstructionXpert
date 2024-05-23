@@ -3,77 +3,83 @@ package Model;
 import java.sql.Date;
 
 public class Project {
-    private int id;
-    private String nom;
-    private String description;
-    private Date debut;
-    private Date fin;
-    private int budget;
+    private int pId;
+    private String pName;
+    private String pDescription;
+    private Date pStartdate;
+    private Date pEndDate;
+    private double budget;
 
-    public Project(int id, String nom, String description, Date debut, Date fin, int budget) {
-        this.id = id;
-        this.nom = nom;
-        this.description = description;
-        this.debut = debut;
-        this.fin = fin;
-        this.budget = budget;
-    }
-    public Project(String nom, String description, Date debut, Date fin, int budget) {
-        this.nom = nom;
-        this.description = description;
-        this.debut = debut;
-        this.fin = fin;
+    // Constructeurs, getters et setters
+
+    public Project() {}
+
+    public Project(int pId, String pName, String pDescription, Date pStartdate, Date pEndDate, double budget) {
+        this.pId = pId;
+        this.pName = pName;
+        this.pDescription = pDescription;
+        this.pStartdate = pStartdate;
+        this.pEndDate = pEndDate;
         this.budget = budget;
     }
 
-    public int getId() {
-        return this.id;
+    public int getpId() {
+        return pId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setpId(int pId) {
+        this.pId = pId;
     }
 
-    public Project() {
+    public String getpName() {
+        return pName;
     }
 
-    public String getNom() {
-        return this.nom;
+    public void setpName(String pName) {
+        this.pName = pName;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getpDescription() {
+        return pDescription;
     }
 
-    public String getDescription() {
-        return this.description;
+    public void setpDescription(String pDescription) {
+        this.pDescription = pDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Date getpStartdate() {
+        return pStartdate;
     }
 
-    public Date getDebut() {
-        return this.debut;
+    public void setpStartdate(Date pStartdate) {
+        this.pStartdate = pStartdate;
     }
 
-    public void setDebut(Date debut) {
-        this.debut = debut;
+    public Date getpEndDate() {
+        return pEndDate;
     }
 
-    public Date getFin() {
-        return this.fin;
+    public void setpEndDate(Date pEndDate) {
+        this.pEndDate = pEndDate;
     }
 
-    public void setFin(Date fin) {
-        this.fin = fin;
+    public double getBudget() {
+        return budget;
     }
 
-    public int getBudget() {
-        return this.budget;
-    }
-
-    public void setBudget(int budget) {
+    public void setBudget(double budget) {
         this.budget = budget;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "pId=" + pId +
+                ", pName='" + pName + '\'' +
+                ", pDescription='" + pDescription + '\'' +
+                ", pStartdate=" + pStartdate +
+                ", pEndDate=" + pEndDate +
+                ", budget=" + budget +
+                '}';
     }
 }
