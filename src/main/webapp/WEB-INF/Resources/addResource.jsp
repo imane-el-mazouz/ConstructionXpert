@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Ajouter une Ressource</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,26 +51,26 @@
   <h2>Ajouter une Ressource</h2>
   <form action="${pageContext.request.contextPath}/AddResourceServlet" method="POST">
     <div class="form-group">
-      <label for="rName">Nom de la Ressource:</label>
+      <label for="rName">Resource Name:</label>
       <input type="text" id="rName" name="rName" required>
     </div>
     <div class="form-group">
-      <label for="rType">Type de la Ressource:</label>
+      <label for="rType">Ressource Type:</label>
       <input type="text" id="rType" name="rType" required>
     </div>
     <div class="form-group">
-      <label for="quantity">Quantité:</label>
+      <label for="quantity">Quantity:</label>
       <input type="number" id="quantity" name="quantity" required>
     </div>
     <div class="form-group">
-      <label for="provider">Fournisseur:</label>
+      <label for="provider">Supplier:</label>
       <input type="text" id="provider" name="provider" required>
     </div>
     <div class="form-group">
       <input type="hidden" id="tId" name="tId" value="${taskId}">
     </div>
     <div class="form-group">
-      <button type="submit">Ajouter</button>
+      <button type="submit">Add</button>
     </div>
   </form>
 </div>

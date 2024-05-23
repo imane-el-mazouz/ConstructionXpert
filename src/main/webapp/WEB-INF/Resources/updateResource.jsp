@@ -3,7 +3,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Mettre à jour une Ressource</title>
+  <title>Update Resource</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,7 +48,7 @@
 <body>
 
 <div class="form-container">
-  <h2>Mettre à jour une Ressource</h2>
+  <h2>Update Resource</h2>
   <form action="${pageContext.request.contextPath}/UpdateResourceServlet" method="POST">
     <input type="hidden"  name="taskId" value="${taskId}">
 
@@ -54,23 +56,23 @@
 
     <input type="hidden" name="rId" value="${resource.rId}">
     <div class="form-group">
-      <label for="rName">Nom de la Ressource:</label>
+      <label for="rName">Ressource Name:</label>
       <input type="text" id="rName" name="rName" value="${resource.rName}" required>
     </div>
     <div class="form-group">
-      <label for="rType">Type de la Ressource:</label>
+      <label for="rType">Ressource Type:</label>
       <input type="text" id="rType" name="rType" value="${resource.rType}" required>
     </div>
     <div class="form-group">
-      <label for="quantity">Quantité:</label>
+      <label for="quantity">Quantity:</label>
       <input type="number" id="quantity" name="quantity" value="${resource.quantity}" required>
     </div>
     <div class="form-group">
-      <label for="provider">Fournisseur:</label>
+      <label for="provider">Supplier:</label>
       <input type="text" id="provider" name="provider" value="${resource.provider}" required>
     </div>
     <div class="form-group">
-      <button type="submit">Mettre à jour</button>
+      <button type="submit">Update</button>
     </div>
   </form>
 </div>

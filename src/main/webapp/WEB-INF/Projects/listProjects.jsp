@@ -3,7 +3,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Liste des Projets</title>
+  <title>Projects List </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     .project-cards {
       display: flex;
@@ -53,15 +55,15 @@
   </style>
 </head>
 <body>
-<h1>Liste des Projets</h1>
+<h1>Projects List </h1>
 
 <div class="project-cards">
   <c:forEach var="project" items="${listProjects}">
     <div class="project-card">
       <h2>${project.pName}</h2>
       <p><strong>Description:</strong> ${project.pDescription}</p>
-      <p><strong>Date de Début:</strong> ${project.pStartdate}</p>
-      <p><strong>Date de Fin:</strong> ${project.pEndDate}</p>
+      <p><strong>StartDate:</strong> ${project.pStartdate}</p>
+      <p><strong>EndDate:</strong> ${project.pEndDate}</p>
       <p><strong>Budget:</strong> ${project.budget}</p>
       <div class="button-container">
         <a href="${pageContext.request.contextPath}/ListTasksServlet?projectId=${project.pId}" class="task-button">See All Tasks</a>
@@ -70,8 +72,9 @@
       </div>
     </div>
   </c:forEach>
-  <a href="${pageContext.request.contextPath}/AddProjectServlet" class="btn btn-success">Add Project</a>
 
 </div>
+<a href="${pageContext.request.contextPath}/AddProjectServlet" class="update-button">Add Project</a>
+
 </body>
 </html>

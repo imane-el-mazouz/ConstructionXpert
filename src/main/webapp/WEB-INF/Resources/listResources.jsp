@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Liste des Ressources</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -75,9 +77,9 @@
     <div class="resource-card">
       <h2>${resource.rName}</h2>
       <p><strong>Type:</strong> ${resource.rType}</p>
-      <p><strong>Quantité:</strong> ${resource.quantity}</p>
-      <p><strong>Fournisseur:</strong> ${resource.provider}</p>
-      <p><strong>ID Tâche:</strong> ${resource.tId}</p>
+      <p><strong>Quantity:</strong> ${resource.quantity}</p>
+      <p><strong>Supplier:</strong> ${resource.provider}</p>
+      <p><strong>TaskId:</strong> ${resource.tId}</p>
       <div class="button-container">
         <a href="${pageContext.request.contextPath}/UpdateResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="update-button">Update</a>
         <a href="${pageContext.request.contextPath}/DeleteResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="delete-button" onclick="return confirm('Are you sure you want to delete this resource?')">Delete</a>
