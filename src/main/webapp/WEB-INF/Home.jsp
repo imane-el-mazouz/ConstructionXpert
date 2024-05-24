@@ -201,6 +201,30 @@
                 transform: translateY(0);
             }
         }
+        #hey {
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            color: #ffcb0f;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .contact-info div {
+            flex: 1;
+        }
+
+        .social-icons a {
+            margin-left: 10px;
+            color: #000;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+
+        }
 
         #home .section__container {
             animation: fadeInUp 0.5s ease forwards;
@@ -214,9 +238,75 @@
 
         body {
             background-color: #ffcb0f;
+            font-family: 'Poppins', sans-serif;
 
         }
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
 
+        .welcome-content {
+            max-width: 600px;
+            margin-right: 20px;
+        }
+
+        .welcome-content h2 {
+            color: #ffc400;
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        .welcome-content h3 {
+            color: #333;
+            font-size: 24px;
+            margin: 0 0 20px;
+        }
+
+        .welcome-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffc400;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .welcome-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .popup .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #f44336;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
         .nav {
             position: fixed;
             width: 100%;
@@ -277,7 +367,7 @@
         }
 
         header {
-            background-image: url(https://www.ilo.org/sites/default/files/2024-03/construction%20hero%20photo%201.jpg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
+            background-image: url(https://laquotidienne.ma/uploads/actualites/6409973551850_construction.jpeg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
         ");
         background-size: cover;
             text-align: center;
@@ -317,7 +407,90 @@
             line-height: 1.6;
             color: #666;
         }
+        /* Why us */
+        #why_us {
+            background: #f2f7fa none repeat scroll 0 0;
+            padding-bottom: 50px;
+            line-height: 18px;
+        }
+        #why_us h2 {
+            margin: 70px 0 20px;
+        }
+        .why_us_item{ padding-top: 55px;}
+        #why_us .fa{
+            border-radius: 100%;
+            box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+            padding: 38px;
+            font-size:45px;
+        }
+        .why_us_item > h4 {
+            font-size: 15px;
+            margin: 60px 0 20px;
+        }
+        /*
+                .why-choose-us {
+                    text-align: center;
+                }
 
+                #contt {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+
+                .features {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+
+                .feature {
+                    width: 25%;
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+
+                .feature img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                }
+
+
+         */
+        /* Styles for service cards */
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: calc(33% - 20px); /* Adjust as needed based on the number of cards */
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            margin-top: 0;
+        }
+
+        .service-info p {
+            margin-bottom: 0;
+        }
         #room {
             background-color: #f9f9f9;
         }
@@ -507,6 +680,55 @@
             text-align: center;
             margin-top: 20px;
         }
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .contact-form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .contact-form-container h2 {
+            color: #fbc02d;
+            margin-bottom: 20px;
+        }
+        .contact-form-container label {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form-container input, .contact-form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form-container button {
+            background-color: #fbc02d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form-container button:hover {
+            background-color: #e6a700;
+        }
+        .contact-image {
+            margin-left: 20px;
+        }
+        .contact-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
         -->
         @media (max-width: 768px) {
             .nav__menu__btn {
@@ -544,7 +766,15 @@
         }
     </style>
 </head>
+
 <body>
+<div id="hey">
+    <div class="contact-info">
+        <div>📞 1234-5678-9012</div>
+        <div>📧 support@construct.com</div>
+        <div>🕒 Mon - Sat 9:00 - 19:00</div>
+    </div>
+</div>
 <nav>
     <div class="nav__bar">
         <div class="nav__header">
@@ -559,28 +789,140 @@
             <li><a href="#news">Contact</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
-        <div class="nav__header">
-            <div class="logo nav__logo">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png" alt="ConstructionExpert Logo" style="max-width: 50px; height: auto;">
-            </div>
-        </div>
-
     </div>
 </nav>
 
-
 <header id="home">
     <div class="section__container">
-        <p style="color:black ">We are Certified Engineers</p>
-        <h1>CONSTRUCTION SERVICES</h1>
-        <h2>CREATIVE & PROFESSIONAL</h2>
+        <h1 style="color:#ffcb0f; ">CONSTRUCTION SERVICES</h1>
+        <h2 style="color:black;">CREATIVE & PROFESSIONAL</h2>
         <a href="" style="display: inline-block;padding: 10px 20px;background-color: #ffcb0f ;color: #fff;text-decoration: none;border-radius: 5px;transition: background-color 0.3s ease;">Discover More</a>
     </div>
 </header>
+<section class="welcome-section">
+    <div class="welcome-content">
+        <h2>ABOUT US</h2>
+        <h3>Construction Xpert Services</h3>
+        <p>Construction Services" is a professional website showcasing a wide range of construction services offered by a team of certified and experienced engineers. The homepage features striking visuals of large construction machinery, emphasizing the company's capability and expertise in handling substantial projects. With a clean and modern design, the site highlights the company's commitment to creativity and professionalism. Key sections of the site include detailed information about the services provided, an impressive portfolio of past projects, and easy access to contact information. The use of bold typography and contrasting colors ensures that the important messages are effectively communicated to visitors, making the site both visually appealing and user-friendly.</p>
+        <a href="" style="display: inline-block;padding: 10px 20px;background-color: #ffcb0f ;color: #fff;text-decoration: none;border-radius: 5px;transition: background-color 0.3s ease;">Show More</a>
+
+    </div>
+    <div class="welcome-image">
+        <img src="https://www.training.com.au/wp-content/uploads/Construction_female_workers.jpg" alt="Construction Worker">
+    </div>
+</section>
+<!-- Why us -->
+<section id="why_us">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="head_title">
+                    <h2>WHY CHOOSE US?</h2>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="why_us_item">
+                    <span class="fa fa-leaf"></span>
+                    <h4>We deliver quality</h4>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="why_us_item">
+                    <span class="fa fa-futbol-o"></span>
+                    <h4>Always on time</h4>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="why_us_item">
+                    <span class="fa fa-group"></span>
+                    <h4>We are pasionate</h4>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="why_us_item">
+                    <span class="fa fa-line-chart"></span>
+                    <h4>Professional Services</h4>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why us end -->
+<!--<section class="why-choose-us">
+    <div class="container" id="contt">
+        <h2>Pourquoi nous choisir ?</h2>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            ecs qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+        <div class="features">
+            <div class="feature">
+                <img src="https://png.pngtree.com/element_our/20200702/ourlarge/pngtree-high-quality-icon-image_2290167.jpg" alt="Qualité">
+                <h3>Qualité</h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                    ecs qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn.create.vista.com/api/media/small/471210716/stock-vector-alarm-clock-minimal-bright-yellow-material-icon" alt="Ponctualité">
+                <h3>Ponctualité</h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                    ecs qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="feature">
+                <img src="https://www.pngitem.com/pimgs/m/28-284733_core-value-values-icon-make-a-difference-icon.png" alt="Passion">
+                <h3>Passion</h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                    ecs qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/11126/11126145.png" alt="Professionnalisme">
+                <h3>Professionnalisme</h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                    ecs qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+<section id="services">
+    <h2>Nos Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <img src="https://www.procore.com/library/wp-content/uploads/2023/06/Ultimate-Guide-to-Construction-Management-Procore-Blog-Hero.png" alt="CONSTRUCTION MANAGEMENT">
+            <div class="service-info">
+                <h3>CONSTRUCTION MANAGEMENT</h3>
+                <p>Nous construisons des maisons modernes et durables pour répondre aux besoins de nos clients.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://iau.ae/wp-content/uploads/2022/02/crop-architect-opening-lo.jpg" alt="Construction Commerciale">
+            <div class="service-info">
+                <h3>ARCHITECTURE</h3>
+                <p>Nous réalisons des projets commerciaux de grande envergure, en respectant les normes les plus élevées de qualité et de sécurité.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Rénovation et Restauration">
+            <div class="service-info">
+                <h3>RENOVATION</h3>
+                <p>Nous rénovons et restaurons des bâtiments historiques avec soin et expertise, préservant leur caractère tout en les rendant fonctionnels pour les générations futures.</p>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres cards pour d'autres services si nécessaire -->
+    </div>
+</section>
 
 <section id="room">
     <div class="section__container">
-        <h2>Our Campus</h2>
+        <h2 >Our Campus</h2>
         <p>"DiligentCampus is an advanced platform tailored to simplify student management within campus environments. It offers intuitive features enabling students to efficiently track schedules, manage courses, stay updated on campus events, and foster seamless communication with peers and faculty. With a focus on fostering diligence and organization, DiligentCampus is dedicated to empowering students towards academic excellence and enhancing their overall campus experience.</p>
         <div class="card__container">
             <div class="card">
@@ -645,35 +987,23 @@
     </div>
 </section>
 <!-- contact section -->
-<section class="contact_section ">
-    <h2>Contact Us</h2>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-5 col-md-6">
-                <div class="form_container pr-0 pr-lg-5 mr-0 mr-lg-2" >
-
-                    <form>
-                        <div>
-                            <input type="text" placeholder="Name" />
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email" />
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Phone Number" />
-                        </div>
-                        <div>
-                            <input type="text" class="message-box" placeholder="Message" />
-                        </div>
-                        <button type="submit" style="display: flex ; justify-content: center">send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+<section class="contact-section">
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="contact-image">
+        <img src="https://www.huffcon.com/wp-content/uploads/2022/11/Contact-Us-Huff-Construction-Company.webp" alt="Construction Image">
     </div>
 </section>
-
 
 <footer>
     <div class="footer__container">
@@ -710,10 +1040,32 @@
         </div>
     </div>
     <div class="footer__bottom">
-        <p>&copy; 2024 DiligentCampus.</p>
+        <p>&copy; 2024 Construction Services.</p>
     </div>
 
 </footer>
+<script>
+    document.getElementById('knowMoreBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('popup').style.display = 'block';
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('popup').style.display = 'none';
+    });
+    function enlargeImage(card) {
+        card.getElementsByTagName('img')[0].style.transform = "scale(1.1)";
+        card.getElementsByTagName('img')[0].style.transition = "transform 0.3s ease";
+    }
+
+    function shrinkImage(card) {
+        card.getElementsByTagName('img')[0].style.transform = "scale(1)";
+    }
+
+</script>
+
+<script src="JS/script.js"></script>
 
 </body>
 </html>
