@@ -367,7 +367,7 @@
         }
 
         header {
-            background-image: url(https://laquotidienne.ma/uploads/actualites/6409973551850_construction.jpeg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
+            background-image: url(https://www.letsbuild.com/wp-content/uploads/2023/07/Depositphotos_89120612_s-2019.jpg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
         ");
         background-size: cover;
             text-align: center;
@@ -511,13 +511,15 @@
         }
 
         .know-more {
-            background-color: #ffc400;
+            background-color: black;
             color: white;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 14px;
+            display: flex;
+            justify-content: center;
         }
 
         .know-more:hover {
@@ -578,6 +580,47 @@
 
 
          */
+        .services, .history, .team {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .services h2, .history h2, .team h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:#ffcb0f ;
+            background-color: #f9f9f9;
+        }
+
+        .service-cards, .team-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-cards .card1, .team-cards .card1{
+            background: #ffcb0f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            max-width: 32%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-cards .card h3, .team-cards .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-cards .card1 img {
+            width: 375px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            height: 266px;
+        }
+
         /* Styles for service cards */
         .services-container {
             display: flex;
@@ -645,6 +688,61 @@
             background-color: black;
             color: #fff;
             padding: 50px 0;
+        }
+        /* made with love */
+        .made-with-love {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .made-with-love h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .made-with-love p {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .filter-buttons {
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            display: none; /* Hidden by default */
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
         }
 
         footer .footer__container {
@@ -906,7 +1004,7 @@
             <li><a href="${pageContext.request.contextPath}/listProject">Projects</a></li>
             <li><a href="#menu">About</a></li>
             <li><a href="#menu">Services</a></li>
-            <li><a href="#news"></a></li>
+            <li><a href="#news">à</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </div>
@@ -999,97 +1097,85 @@
     </div>
 </section>
 -->
-<section class="our-services">
+<section class="services">
     <h2>OUR SERVICES</h2>
     <div class="service-cards">
-        <div class="service-card">
-            <img src="https://www.procore.com/library/wp-content/uploads/2023/06/Ultimate-Guide-to-Construction-Management-Procore-Blog-Hero.png" alt="Construction Management">
-            <h3>CONSTRUCTION MANAGEMENT</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
-            <button class="know-more">KNOW MORE</button>
-        </div>
-        <div class="service-card">
-            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Renovation">
-
+        <div class="card1">
+            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Construction Management">
             <h3>RENOVATION</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+            <p>act of renewing or restoring something.</p>
             <button class="know-more">KNOW MORE</button>
         </div>
-        <div class="service-card">
-            <img src="https://iau.ae/wp-content/uploads/2022/02/crop-architect-opening-lo.jpg" alt="Architecture">
+        <div class="card1">
+            <img src="https://iau.ae/wp-content/uploads/2022/02/crop-architect-opening-lo.jpg" alt="Construction Management">
             <h3>ARCHITECTURE</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+            <p>art and technique of designing and building.</p>
+            <button class="know-more">KNOW MORE</button>
+        </div>
+        <div class="card1">
+            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Construction Management">
+            <h3>RENOVATION</h3>
+            <p>act of renewing or restoring something.</p>
             <button class="know-more">KNOW MORE</button>
         </div>
     </div>
 </section>
-
-<section id="room">
-    <div class="section__container">
-        <h2 >Our Campus</h2>
-        <p>"DiligentCampus is an advanced platform tailored to simplify student management within campus environments. It offers intuitive features enabling students to efficiently track schedules, manage courses, stay updated on campus events, and foster seamless communication with peers and faculty. With a focus on fostering diligence and organization, DiligentCampus is dedicated to empowering students towards academic excellence and enhancing their overall campus experience.</p>
-        <div class="card__container">
-            <div class="card">
-                <img src="images/" style="background-size: cover;background-position: center;height: 350px;" alt="">
+<section class="why-choose-us">
+    <h2>WHY CHOOSE US?</h2>
+    <p class="description">Our team of highly skilled professionals is passionate about transforming your vision into reality. We take pride in our commitment to quality craftsmanship, using only the finest materials and adhering to the strictest safety standards to ensure that your project is built to last and exceeds your expectations.</p>
+    <div class="features">
+        <div class="feature">
+            <div class="icon">
+                <img src="https://static.thenounproject.com/png/1587734-200.png" alt="Quality Icon">
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/74/79/1e/74791ea71f360b1bbfaffe7109481d8d.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="">
+            <h3>WE DELIVER QUALITY</h3>
+        </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn.discordapp.com/attachments/1210252312530919475/1243522297734893598/image.png?ex=6651c7e3&is=66507663&hm=388e7a99203802a9ff4edf6754a9fb3bbd2520fe54cfe0d753172fe93270c187&" alt="Time Icon">
             </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/97/44/76/974476778413b6f808a8166b3754a396.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="">
+            <h3>ALWAYS ON TIME</h3>
+        </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn4.iconfinder.com/data/icons/sweetheart-2/67/heart_love_passion_favorite_palm_hand-512.png" alt="Passionate Icon">
             </div>
+            <h3>WE ARE PASSIONATE</h3>
+        </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/256/5362/5362724.png" alt="Professional Icon">
+            </div>
+            <h3>PROFESSIONAL SERVICES</h3>
+        </div>
+    </div>
+</section>
+<section class="made-with-love">
+    <h2>MADE WITH LOVE</h2>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">SHOW ALL</button>
+        <button class="filter-btn" data-filter="buildings">BUILDINGS</button>
+        <button class="filter-btn" data-filter="interior-design">INTERIOR DESIGN</button>
+        <button class="filter-btn" data-filter="isolation">ISOLATION</button>
+        <button class="filter-btn" data-filter="plumbing">PLUMBING</button>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item" data-category="buildings">
+            <img src="path/to/image1.jpg" alt="Buildings">
+        </div>
+        <div class="gallery-item" data-category="interior-design">
+            <img src="path/to/image2.jpg" alt="Interior Design">
+        </div>
+        <div class="gallery-item" data-category="isolation">
+            <img src="path/to/image3.jpg" alt="Isolation">
+        </div>
+        <div class="gallery-item" data-category="plumbing">
+            <img src="path/to/image4.jpg" alt="Plumbing">
         </div>
     </div>
 </section>
 
-<section id="news">
-    <div class="section__container">
-        <h2>Our Clubs</h2>
-        <p>Explore the diverse range of clubs and student organizations available on campus. From academic and cultural clubs to sports and recreational groups, there's something for everyone.</p>
-        <div class="card__container">
-            <div class="card">
-                <img src="https://images.pexels.com/photos/5467332/pexels-photo-5467332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="background-size: cover;background-position: center;height: 350px;" alt="Club 1">
-                <h3>Sports Club</h3>
-                <button type="submit">Join Us</button>
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/31/1e/d4/311ed44a40b7e15bd9556dd982cce514.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="Club 2">
-                <h3>Art Club</h3>
-                <button type="submit">Join Us</button>
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/ec/9e/f0/ec9ef032af6b5b9d65e2f91e52ce9320.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="Club 3">
-                <h3>Entrep Club</h3>
-                <button type="submit">Join Us</button>
-            </div>
-        </div>
-
-    </div>
-</section>
-<section id="feature">
-    <div class="section__container">
-        <h2>Upcoming Events </h2>
-        <p>Stay updated on all the exciting events happening on campus through our comprehensive events calendar. From academic seminars to cultural festivals, there's always something happening to enrich your college experience.</p>
-        <div class="card__container">
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/85/b1/73/85b1731f45fa2041cb476239f527a645.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="Club 1">
-                <button type="submit">Reserve your ticket</button>
-
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/06/30/e6/0630e63a37d7ef817f4705d1627bd89d.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="Club 1">
-                <button type="submit">Reserve your ticket</button>
-
-            </div>
-            <div class="card">
-                <img src="https://i.pinimg.com/564x/d5/f5/f5/d5f5f50d8e08355721216581d1cc084e.jpg" style="background-size: cover;background-position: center;height: 350px;" alt="Club 1">
-                <button type="submit">Reserve your ticket</button>
-
-            </div>
-        </div>
-
-    </div>
-</section>
 <!-- contact section -->
 <section class="contact-section">
     <div class="contact-form-container">
@@ -1171,6 +1257,28 @@
             alert('More information will be available soon!');
         });
     });
+    $(document).ready(function() {
+        // Show all items by default
+        $('.gallery-item').show();
+
+        // Filter items on button click
+        $('.filter-btn').on('click', function() {
+            var filterValue = $(this).attr('data-filter');
+
+            // Remove active class from all buttons
+            $('.filter-btn').removeClass('active');
+            // Add active class to the clicked button
+            $(this).addClass('active');
+
+            if (filterValue === 'all') {
+                $('.gallery-item').show();
+            } else {
+                $('.gallery-item').hide();
+                $('.gallery-item[data-category="' + filterValue + '"]').show();
+            }
+        });
+    });
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

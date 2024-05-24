@@ -58,6 +58,7 @@
     <div class="form-group">
       <label for="rName">Ressource Name:</label>
       <input type="text" id="rName" name="rName" value="${resource.rName}" required>
+
     </div>
     <div class="form-group">
       <label for="rType">Ressource Type:</label>

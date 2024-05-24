@@ -1,6 +1,7 @@
 package Servlet.Resources;
 
 import DaoImp.ResourceDaoImp;
+import Model.Project;
 import Model.Resource;
 
 import javax.servlet.ServletException;
@@ -25,6 +26,8 @@ public class UpdateResourceServlet extends HttpServlet {
         int taskId = Integer.parseInt(request.getParameter("taskId"));
         int resourceId = Integer.parseInt(request.getParameter("resourceId"));
         try {
+            Resource existingResource = resourceDao.selectResourceById(resourceId);
+            request.setAttribute("resource", existingResource);
             Resource resource = resourceDao.selectResourceById(resourceId);
             request.setAttribute("resource", resource);
             request.setAttribute("resourceId", resourceId);
