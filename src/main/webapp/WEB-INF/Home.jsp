@@ -15,7 +15,7 @@
       - custom css link
     -->
     <style><%@include file="CSS/style.css"%></style>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <!--
       - google font link
     -->
@@ -407,7 +407,125 @@
             line-height: 1.6;
             color: #666;
         }
-        /* Why us */
+        .why-choose-us {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .why-choose-us h2 {
+            font-size: 36px;
+            color: #ffc400;
+
+        }
+
+        .why-choose-us .description {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .feature .icon {
+            width: 221px;
+            height: 212px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffc400, #ffc400);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .feature .icon img {
+            width: 101px;
+            height: 99px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #666;
+        }
+    /* Our serfvices */
+        .our-services {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .our-services h2 {
+            font-size: 36px;
+            color: #ffc400;
+            margin-bottom: 40px;
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .service-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 20px 0 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .know-more {
+            background-color: #ffc400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .know-more:hover {
+            background-color: #ffffff;
+        }
+
+
+        /* Why us
         #why_us {
             background: #f2f7fa none repeat scroll 0 0;
             padding-bottom: 50px;
@@ -427,6 +545,7 @@
             font-size: 15px;
             margin: 60px 0 20px;
         }
+        */
         /*
                 .why-choose-us {
                     text-align: center;
@@ -785,8 +904,9 @@
         <ul class="nav__links" id="nav-links">
             <li ><a href="#Home">Home</a></li>
             <li><a href="${pageContext.request.contextPath}/listProject">Projects</a></li>
-            <li><a href="#menu">Events</a></li>
-            <li><a href="#news">Contact</a></li>
+            <li><a href="#menu">About</a></li>
+            <li><a href="#menu">Services</a></li>
+            <li><a href="#news"></a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </div>
@@ -812,46 +932,33 @@
     </div>
 </section>
 <!-- Why us -->
-<section id="why_us">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="head_title">
-                    <h2>WHY CHOOSE US?</h2>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
-
-                </div>
+<section class="why-choose-us">
+    <h2>WHY CHOOSE US?</h2>
+    <p class="description">Our team of highly skilled professionals is passionate about transforming your vision into reality. We take pride in our commitment to quality craftsmanship, using only the finest materials and adhering to the strictest safety standards to ensure that your project is built to last and exceeds your expectations.</p>
+    <div class="features">
+        <div class="feature">
+            <div class="icon">
+                <img src="https://static.thenounproject.com/png/1587734-200.png" alt="Quality Icon">
             </div>
+            <h3>WE DELIVER QUALITY</h3>
         </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="why_us_item">
-                    <span class="fa fa-leaf"></span>
-                    <h4>We deliver quality</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni </p>
-                </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn.discordapp.com/attachments/1210252312530919475/1243522297734893598/image.png?ex=6651c7e3&is=66507663&hm=388e7a99203802a9ff4edf6754a9fb3bbd2520fe54cfe0d753172fe93270c187&" alt="Time Icon">
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="why_us_item">
-                    <span class="fa fa-futbol-o"></span>
-                    <h4>Always on time</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
-                </div>
+            <h3>ALWAYS ON TIME</h3>
+        </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn4.iconfinder.com/data/icons/sweetheart-2/67/heart_love_passion_favorite_palm_hand-512.png" alt="Passionate Icon">
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="why_us_item">
-                    <span class="fa fa-group"></span>
-                    <h4>We are pasionate</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
-                </div>
+            <h3>WE ARE PASSIONATE</h3>
+        </div>
+        <div class="feature">
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/256/5362/5362724.png" alt="Professional Icon">
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="why_us_item">
-                    <span class="fa fa-line-chart"></span>
-                    <h4>Professional Services</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
-                </div>
-            </div>
+            <h3>PROFESSIONAL SERVICES</h3>
         </div>
     </div>
 </section>
@@ -892,31 +999,28 @@
     </div>
 </section>
 -->
-<section id="services">
-    <h2>Nos Services</h2>
-    <div class="services-container">
+<section class="our-services">
+    <h2>OUR SERVICES</h2>
+    <div class="service-cards">
         <div class="service-card">
-            <img src="https://www.procore.com/library/wp-content/uploads/2023/06/Ultimate-Guide-to-Construction-Management-Procore-Blog-Hero.png" alt="CONSTRUCTION MANAGEMENT">
-            <div class="service-info">
-                <h3>CONSTRUCTION MANAGEMENT</h3>
-                <p>Nous construisons des maisons modernes et durables pour répondre aux besoins de nos clients.</p>
-            </div>
+            <img src="https://www.procore.com/library/wp-content/uploads/2023/06/Ultimate-Guide-to-Construction-Management-Procore-Blog-Hero.png" alt="Construction Management">
+            <h3>CONSTRUCTION MANAGEMENT</h3>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+            <button class="know-more">KNOW MORE</button>
         </div>
         <div class="service-card">
-            <img src="https://iau.ae/wp-content/uploads/2022/02/crop-architect-opening-lo.jpg" alt="Construction Commerciale">
-            <div class="service-info">
-                <h3>ARCHITECTURE</h3>
-                <p>Nous réalisons des projets commerciaux de grande envergure, en respectant les normes les plus élevées de qualité et de sécurité.</p>
-            </div>
+            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Renovation">
+
+            <h3>RENOVATION</h3>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+            <button class="know-more">KNOW MORE</button>
         </div>
         <div class="service-card">
-            <img src="https://www.renoassistance.ca/wp-content/uploads/2021/08/renovation-majeure-1.jpg" alt="Rénovation et Restauration">
-            <div class="service-info">
-                <h3>RENOVATION</h3>
-                <p>Nous rénovons et restaurons des bâtiments historiques avec soin et expertise, préservant leur caractère tout en les rendant fonctionnels pour les générations futures.</p>
-            </div>
+            <img src="https://iau.ae/wp-content/uploads/2022/02/crop-architect-opening-lo.jpg" alt="Architecture">
+            <h3>ARCHITECTURE</h3>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+            <button class="know-more">KNOW MORE</button>
         </div>
-        <!-- Ajoutez d'autres cards pour d'autres services si nécessaire -->
     </div>
 </section>
 
@@ -1062,9 +1166,14 @@
     function shrinkImage(card) {
         card.getElementsByTagName('img')[0].style.transform = "scale(1)";
     }
-
+    $(document).ready(function() {
+        $('.know-more').on('click', function() {
+            alert('More information will be available soon!');
+        });
+    });
 </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="JS/script.js"></script>
 
 </body>
