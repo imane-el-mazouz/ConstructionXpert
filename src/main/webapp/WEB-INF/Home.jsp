@@ -201,6 +201,16 @@
                 transform: translateY(0);
             }
         }
+        /* contact 2 */
+
+        @keyframes titleAnimation {
+            0% {
+                color: #555;
+            }
+            100% {
+                color: #333;
+            }
+        }
         #hey {
             background-color: black;
             padding: 10px 0;
@@ -668,7 +678,75 @@
         #news {
             background-color: #f9f9f9;
         }
+        /* reviews */
 
+        #reviews {
+            text-align: center;
+            background-color: #fff;
+            padding: 95px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        #reviews h2 {
+
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffcb0f;
+
+        }
+
+
+        .reviews-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .review-card {
+            background-color: #ffcb0f;
+            border: 3px solid #f9f9f9;
+            border-radius: 55px;
+            padding: 58px;
+            width: 31%;
+            position: relative;
+            transition: transform 0.3s;
+            height: 346px;
+        }
+
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-content {
+            margin-bottom: 20px;
+        }
+
+
+
+        .reviewer-info {
+            text-align: center;
+        }
+
+        .reviewer-info img {
+            border-radius: 50%;
+            width: 116px;
+            height: 110px;
+            transition: transform 0.3s;
+            margin-left:100px;
+        }
+
+        .review-card:hover .reviewer-info img {
+            transform: rotate(360deg);
+        }
+
+        .reviewer-name {
+            margin: 71px 0 0;
+            font-weight: bold;
+            background-color: white;
+        }
+        /* end reviews */
         button {
             background-color: blue;
             color: white;
@@ -688,23 +766,6 @@
             background-color: black;
             color: #fff;
             padding: 50px 0;
-        }
-        /* made with love */
-        .made-with-love {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .made-with-love h2 {
-            font-size: 36px;
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .made-with-love p {
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 40px;
         }
 
         .filter-buttons {
@@ -902,18 +963,21 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            background-color:#f9f9f9 ;
         }
         .contact-form-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
+            max-width: 887px;
+            width: 126%;
         }
         .contact-form-container h2 {
-            color: #fbc02d;
+           
+            font-size: 36px;
             margin-bottom: 20px;
+            color: #ffcb0f;
         }
         .contact-form-container label {
             color: #333;
@@ -942,9 +1006,9 @@
             margin-left: 20px;
         }
         .contact-image img {
-            max-width: 100%;
+            max-width: 94%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
         }
         -->
         @media (max-width: 768px) {
@@ -1120,59 +1184,36 @@
         </div>
     </div>
 </section>
-<section class="why-choose-us">
-    <h2>WHY CHOOSE US?</h2>
-    <p class="description">Our team of highly skilled professionals is passionate about transforming your vision into reality. We take pride in our commitment to quality craftsmanship, using only the finest materials and adhering to the strictest safety standards to ensure that your project is built to last and exceeds your expectations.</p>
-    <div class="features">
-        <div class="feature">
-            <div class="icon">
-                <img src="https://static.thenounproject.com/png/1587734-200.png" alt="Quality Icon">
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-content">
+                <p><i class="quote">“</i>Exceptional experience and results. We couldn't be happier!</p>
             </div>
-            <h3>WE DELIVER QUALITY</h3>
+            <div class="reviewer-info">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="John Smith">
+                <p class="reviewer-name">Lara</p>
+            </div>
         </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="https://cdn.discordapp.com/attachments/1210252312530919475/1243522297734893598/image.png?ex=6651c7e3&is=66507663&hm=388e7a99203802a9ff4edf6754a9fb3bbd2520fe54cfe0d753172fe93270c187&" alt="Time Icon">
+        <div class="review-card">
+            <div class="review-content">
+                <p><i class="quote">“</i>Clear and transparent communication throughout the project!</p>
             </div>
-            <h3>ALWAYS ON TIME</h3>
+            <div class="reviewer-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/6009/6009978.png" alt="John Smith">
+                <p class="reviewer-name">John</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="review-content">
+                <p><i class="quote">“</i>Excellent quality at a reasonable price. Worth every penny!</p>
 
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="https://cdn4.iconfinder.com/data/icons/sweetheart-2/67/heart_love_passion_favorite_palm_hand-512.png" alt="Passionate Icon">
             </div>
-            <h3>WE ARE PASSIONATE</h3>
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="https://cdn-icons-png.flaticon.com/256/5362/5362724.png" alt="Professional Icon">
+            <div class="reviewer-info">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="John Smith">
+                <p class="reviewer-name">Emma</p>
             </div>
-            <h3>PROFESSIONAL SERVICES</h3>
-        </div>
-    </div>
-</section>
-<section class="made-with-love">
-    <h2>MADE WITH LOVE</h2>
-    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
-    <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">SHOW ALL</button>
-        <button class="filter-btn" data-filter="buildings">BUILDINGS</button>
-        <button class="filter-btn" data-filter="interior-design">INTERIOR DESIGN</button>
-        <button class="filter-btn" data-filter="isolation">ISOLATION</button>
-        <button class="filter-btn" data-filter="plumbing">PLUMBING</button>
-    </div>
-    <div class="gallery">
-        <div class="gallery-item" data-category="buildings">
-            <img src="path/to/image1.jpg" alt="Buildings">
-        </div>
-        <div class="gallery-item" data-category="interior-design">
-            <img src="path/to/image2.jpg" alt="Interior Design">
-        </div>
-        <div class="gallery-item" data-category="isolation">
-            <img src="path/to/image3.jpg" alt="Isolation">
-        </div>
-        <div class="gallery-item" data-category="plumbing">
-            <img src="path/to/image4.jpg" alt="Plumbing">
         </div>
     </div>
 </section>
@@ -1277,6 +1318,49 @@
                 $('.gallery-item').hide();
                 $('.gallery-item[data-category="' + filterValue + '"]').show();
             }
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const reviewsContainer = document.getElementById('reviews-container');
+        const reviewCards = document.querySelectorAll('.review-card');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        let currentIndex = 0;
+        const totalReviews = reviewCards.length;
+
+        // Function to show the review at the given index
+        function showReview(index) {
+            const offset = -index * 100;
+            reviewsContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Show next review
+        function nextReview() {
+            currentIndex = (currentIndex + 1) % totalReviews;
+            showReview(currentIndex);
+        }
+
+        // Show previous review
+        function prevReview() {
+            currentIndex = (currentIndex - 1 + totalReviews) % totalReviews;
+            showReview(currentIndex);
+        }
+
+        // Auto slide reviews every 5 seconds
+        let autoSlide = setInterval(nextReview, 5000);
+
+        // Event listeners for navigation buttons
+        nextButton.addEventListener('click', () => {
+            nextReview();
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextReview, 5000);
+        });
+
+        prevButton.addEventListener('click', () => {
+            prevReview();
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextReview, 5000);
         });
     });
 

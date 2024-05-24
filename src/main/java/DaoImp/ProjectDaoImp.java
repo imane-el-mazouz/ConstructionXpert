@@ -1,5 +1,5 @@
 package DaoImp;
-import DAO.ProjectDao;
+import DAO.ProjectDAO;
 import Db_Connector.Db_Connection;
 import Model.Project;
 import java.sql.*;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ProjectDaoImp implements ProjectDao {
+public class ProjectDaoImp implements ProjectDAO {
 
     private static final String INSERT_PROJECT_SQL = "INSERT INTO project (p_id, p_name, p_description, p_start_date, p_end_date, budget) VALUES (?, ?, ?, ?, ?, ?);";
     private static final String UPDATE_PROJECT_SQL = "UPDATE project SET p_name = ?, p_description = ?, p_start_date = ?, p_end_date = ?, budget = ? WHERE p_id = ?;";

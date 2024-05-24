@@ -5,7 +5,7 @@ import Model.Project;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ProjectDao {
+public interface ProjectDAO {
     void addProject(Project project) throws SQLException;
     boolean updateProject(Project project) throws SQLException;
     void deleteProject(int pId) throws SQLException;
