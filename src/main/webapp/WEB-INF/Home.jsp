@@ -1135,6 +1135,7 @@
                 <img src="https://cdn.discordapp.com/attachments/1210252312530919475/1243522297734893598/image.png?ex=6651c7e3&is=66507663&hm=388e7a99203802a9ff4edf6754a9fb3bbd2520fe54cfe0d753172fe93270c187&" alt="Time Icon">
             </div>
             <h3>ALWAYS ON TIME</h3>
+
         </div>
         <div class="feature">
             <div class="icon">
