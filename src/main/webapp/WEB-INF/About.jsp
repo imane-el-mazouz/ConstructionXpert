@@ -99,6 +99,8 @@
         .welcome-content {
             max-width: 600px;
             margin-right: 20px;
+            transition: transform 0.3s ease;
+
         }
 
         .welcome-content h2 {
@@ -117,6 +119,8 @@
             color: #666;
             line-height: 1.6;
             margin: 0 0 20px;
+            transition: transform 0.3s ease;
+
         }
 
         .btn {
@@ -133,6 +137,12 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            transition: transform 0.3s ease;
+
+        }
+        .welcome-image {
+            flex: 1;
+            transition: transform 0.3s ease;
         }
         .popup {
             display: none;
@@ -1037,6 +1047,15 @@
 </footer>
 <script>
 
+
+        document.querySelectorAll('.show-more').forEach(button => {
+        button.addEventListener('click', function () {
+            const content = this.parentElement;
+            const image = content.parentElement.querySelector('.welcome-image');
+            content.style.transform = content.style.transform === 'translateY(-100%)' ? 'translateY(0)' : 'translateY(-100%)';
+            image.style.transform = image.style.transform === 'translateY(-100%)' ? 'translateY(0)' : 'translateY(-100%)';
+        });
+    });
 
 </script>
 

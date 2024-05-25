@@ -1880,36 +1880,31 @@
         </div>
     </div>
 </section>
-<section id="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="reviews-container">
-        <div class="review-card">
-            <div class="review-content">
-                <p><i class="quote">“</i>Exceptional experience and results. We couldn't be happier!</p>
-            </div>
-            <div class="reviewer-info">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="John Smith">
-                <p class="reviewer-name">Lara</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p><i class="quote">“</i>Clear and transparent communication throughout the project!</p>
-            </div>
-            <div class="reviewer-info">
-                <img src="https://cdn-icons-png.flaticon.com/512/6009/6009978.png" alt="John Smith">
-                <p class="reviewer-name">John</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <div class="review-content">
-                <p><i class="quote">“</i>Excellent quality at a reasonable price. Worth every penny!</p>
 
+<section class="why-choose-us">
+    <h2>CUSTOMERS REVIEWS</h2>
+    <p class="description">Our Customers are the best.</p>
+    <div class="features">
+        <div class="feature">
+            <div class="icon" style="transition: transform 0.3s;transform: scale(1.05);">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="Quality Icon">
             </div>
-            <div class="reviewer-info">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="John Smith">
-                <p class="reviewer-name">Emma</p>
+            <p><i class="quote">“</i>Excellent quality at a reasonable price. Worth every penny!</p>
+            <p class="reviewer-name">Anna</p>
+        </div>
+        <div class="feature">
+            <div class="icon" style="transition: transform 0.3s;transform: scale(1.05);">
+                <img src="https://cdn-icons-png.flaticon.com/512/6009/6009978.png" alt="John Smith">
             </div>
+            <p><i class="quote">“</i>Exceptional experience and results. We couldn't be happier!</p>
+            <p class="reviewer-name">John</p>
+        </div>
+        <div class="feature">
+            <div class="icon" style="transition: transform 0.3s;transform: scale(1.05);">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/860/760/original/girl-in-the-headphones-customer-support-center-via-phone-mail-operator-service-icons-concept-illustration-in-flat-style-vector.jpg" alt="Quality Icon">
+            </div>
+            <p><i class="quote">“</i>Clear communication throughout the project!</p>
+            <p class="reviewer-name">Emma</p>
         </div>
     </div>
 </section>
