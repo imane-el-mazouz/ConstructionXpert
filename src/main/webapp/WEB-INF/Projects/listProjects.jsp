@@ -1067,7 +1067,7 @@
   </c:forEach>
 
 </div>
-  <a href="${pageContext.request.contextPath}/AddProjectServlet" class="button-add">Add Project</a>
+  <a href="${pageContext.request.contextPath}/AddProjectServlet" class="button-add" >Add Project</a>
 
 </section>
 

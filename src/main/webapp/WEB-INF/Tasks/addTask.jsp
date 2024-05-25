@@ -79,7 +79,7 @@
       <input type="hidden" id="projectId" name="projectId" value="${projectId}">
     </div>
     <div class="form-group">
-      <button type="submit">Add Task</button>
+      <button type="submit" onclick="return confirm('Are you sure you want to add this new task?')">Add Task</button>
     </div>
   </form>
 </div>

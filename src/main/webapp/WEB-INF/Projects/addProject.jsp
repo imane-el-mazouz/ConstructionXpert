@@ -1111,7 +1111,7 @@
     </div>
 
 
-    <input type="submit" value="Add Project" >
+    <input type="submit" value="Add Project" onclick="return confirm('Are you sure you want to add this new project?')" >
 
 </form>
 </section>

@@ -75,7 +75,7 @@
             <input type="text" id="resources" name="resources" value="${task.resources}" required>
         </div>
         <div class="form-group">
-            <button type="submit">Update Task</button>
+            <button type="submit"  onclick="return confirm('Are you sure you want to update this task?')">Update Task</button>
         </div>
     </form>
 </div>
