@@ -1,11 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: user
-  Date: 09/05/2024
-  Time: 16:38
+  User: Dell PC
+  Date: 25/05/2024
+  Time: 17:46
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
@@ -526,7 +526,7 @@
             height: auto;
             border-radius: 8px;
         }
-    /* Our serfvices */
+        /* Our serfvices */
         .our-services {
             text-align: center;
             padding: 50px 20px;

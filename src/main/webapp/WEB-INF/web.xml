@@ -84,6 +84,15 @@
         <url-pattern>/addResource</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AboutServlet</servlet-name>
+        <servlet-class>Servlet.AboutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AboutServlet</servlet-name>
+        <url-pattern>/about</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>/</welcome-file>
     </welcome-file-list>
