@@ -1038,8 +1038,7 @@
       <li ><a href="${pageContext.request.contextPath}/">Home</a></li>
       <li ><a href="${pageContext.request.contextPath}/about">About</a></li>
       <li><a href="${pageContext.request.contextPath}/listProject">Projects</a></li>
-      <li><a href=".services">Services</a></li>
-      <li><a href=".contact-section">Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
     </ul>
   </div>
 </nav>

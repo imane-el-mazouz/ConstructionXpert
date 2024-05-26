@@ -1,14 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Dell PC
+  Date: 25/05/2024
+  Time: 17:46
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Tasks List</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style><%@include file="../CSS/style.css"%></style>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <!--
+      - custom css link
+    -->
+    <style><%@include file="CSS/style.css"%></style>
+    <link rel="stylesheet" href="CSS/style.css">
     <!--
       - google font link
     -->
@@ -19,86 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
     <style>
-
-
-        .task-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .task-card {
-            background-color:#ffcb0f;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgb(255, 219, 41);
-            padding: 20px;
-            width: 500px;
-            transition: transform 0.3s ease;
-        }
-        .task-card h2 {
-            margin-top: 0;
-        }
-        .task-card p {
-            margin-bottom: 10px;
-            color: #666666;
-        }
-        .task-card:hover {
-            transform: translateY(-5px);
-        }
-
-
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-
-        .button-container a {
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            color: #ffffff;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .update-button {
-            background-color: #007bff;
-        }
-        .delete-button {
-            background-color: #dc3545;
-        }
-        .resources-button {
-            background-color: #28a745;
-        }
-
-        .button-add{
-            background-color: #ffcb0f;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 153px;
-            margin-top: 30px;
-            margin-left: 650px;
-        }
-
-        .button-container a.button-add {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffcb0f ;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .button-container a:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        /* nav footer .. */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -109,8 +37,7 @@
                 transform: translateY(0);
             }
         }
-        /* projects */
-
+        /* contact 2 */
         /* about diff */
 
         @keyframes titleAnimation {
@@ -120,6 +47,51 @@
             100% {
                 color: #333;
             }
+        }
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+
+        }
+        .contact-form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .contact-form-container h2 {
+            color: #fbc02d;
+            margin-bottom: 20px;
+        }
+        .contact-form-container label {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form-container input, .contact-form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        .contact-form-container button {
+            background-color: #fbc02d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 35%;
+        }
+        .contact-form-container button:hover {
+            background-color: #000000;
         }
         #hey {
             background-color: black;
@@ -159,20 +131,6 @@
         body {
             background-color: #ffcb0f;
             font-family: 'Poppins', sans-serif;
-
-        }
-        .welcome-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 50px;
-            background-color: #f9f9f9;
-        }
-
-        .welcome-content {
-            max-width: 600px;
-            margin-right: 20px;
-            transition: transform 0.3s ease;
 
         }
 
@@ -297,7 +255,7 @@
         }
 
         header {
-            background-image: url(https://paulsenconstruction.com/wp-content/uploads/2015/12/Paulsen-Construction_Equipment-Image.jpg) ;background-size: cover;background-position: center;min-height: 750px;height: 100vh;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
+        background-image: url(https://swankco.com/wp-content/uploads/Contact-Page-banner.jpg) ;background-size: cover;background-position: center; min-height: 432px;height: 31vh;;max-height: 1000px;display: flex;justify-content: flex-start;align-items: center;padding-block: var(--section-padding);background-repeat: no-repeat;
         ");
         background-size: cover;
             text-align: center;
@@ -1012,10 +970,9 @@
         }
 
 
-
-
     </style>
 </head>
+
 <body>
 <div id="hey">
     <div class="contact-info">
@@ -1040,33 +997,35 @@
     </div>
 </nav>
 
+<header id="home">
+    <div class="section__container">
+        <h1 style="color:#ffcb0f; ">Contact Us </h1>
+    </div>
+</header>
+<section class="contact-section">>
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-<section class="list"style="background-color: white ; width: 100% ;height: auto ; padding: 50px 20px;
-            text-align: center;">
-    <h1 style="font-size: 36px;
-            color: #ffc400;
-            margin-bottom: 40px;">Tasks List </h1>
-<div class="task-cards">
-    <c:forEach var="task" items="${tasks}">
-        <div class="task-card">
-            <h2>${task.tDescription}</h2>
-            <p><strong>Description:</strong> ${task.tDescription}</p>
-            <p><strong>Start Date:</strong> ${task.tStartdate}</p>
-            <p><strong>End Date:</strong> ${task.tEndDate}</p>
-            <p><strong>Status:</strong> ${task.statut}</p>
-            <p><strong>Resources:</strong> ${task.resources}</p>
-            <div class="button-container">
-                <a href="${pageContext.request.contextPath}/UpdateTaskServlet?taskId=${task.tId}&projectId=${projectId}" class="update-button">Update</a>
-                <a href="${pageContext.request.contextPath}/DeleteTaskServlet?taskId=${task.tId}&projectId=${projectId}" class="delete-button" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>
-                <a href="${pageContext.request.contextPath}/ListResourcesServlet?taskId=${task.tId}" class="resources-button">See All Resources</a>
-            </div>
-        </div>
-    </c:forEach>
-</div>
-    <a href="${pageContext.request.contextPath}/AddTaskServlet?projectId=${projectId}" class="button-add">Add Task</a>
-    <a href="${pageContext.request.contextPath}/listProject"class="button-add"> See All Projects</a>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message" required>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="formMessage" class="hidden"></div>
+    </div>
 </section>
+
+
+
 
 <footer>
     <div class="footer__container">
@@ -1108,7 +1067,32 @@
 
 </footer>
 <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        if (name === '' || email === '' || phone === '' || message === '') {
+            showFormMessage('Please fill out all fields.', 'error');
+            return;
+        }
+
+        console.log('Sending message:', { name, email, phone, message });
+        showFormMessage('Thank you for your message. We will get back to you shortly!', 'success');
+
+        document.getElementById('contactForm').reset();
+    });
+
+    function showFormMessage(message, type) {
+        const formMessage = document.getElementById('formMessage');
+        formMessage.textContent = message;
+        formMessage.className = type;
+        formMessage.classList.remove('hidden');
+    }
 
 </script>
 
