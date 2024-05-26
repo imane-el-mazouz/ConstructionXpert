@@ -1037,7 +1037,7 @@
             text-align: center;">
   <h1 style="font-size: 36px;
             color: #ffc400;
-            margin-bottom: 40px;">Add New Task </h1>
+            margin-bottom: 40px;">Add New Resource </h1>
 
 <div class="form-container">
   <form action="${pageContext.request.contextPath}/AddResourceServlet" method="POST">
