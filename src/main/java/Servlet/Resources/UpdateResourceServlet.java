@@ -28,8 +28,6 @@ public class UpdateResourceServlet extends HttpServlet {
         try {
             Resource existingResource = resourceDao.selectResourceById(resourceId);
             request.setAttribute("resource", existingResource);
-            Resource resource = resourceDao.selectResourceById(resourceId);
-            request.setAttribute("resource", resource);
             request.setAttribute("resourceId", resourceId);
             request.setAttribute("taskId", taskId);
             request.getRequestDispatcher("/WEB-INF/Resources/updateResource.jsp").forward(request, response);

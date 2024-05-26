@@ -1074,7 +1074,7 @@
       <input type="text" id="provider" name="provider" value="${resource.provider}" required>
     </div>
     <div class="form-group">
-      <button type="submit">Update</button>
+      <button type="submit"onclick="return confirm('Are you sure you want to update this resource?')">Update</button>
     </div>
   </form>
 </div>
