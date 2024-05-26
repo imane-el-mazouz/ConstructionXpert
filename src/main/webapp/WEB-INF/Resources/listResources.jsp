@@ -1070,6 +1070,7 @@
   </c:forEach>
 </div>
   <a href="${pageContext.request.contextPath}/AddResourceServlet?taskId=${taskId}" class="button-add">Add Resource</a>
+  <a href="${pageContext.request.contextPath}/listProject"class="button-add"> See All Projects</a>
 
 </section>
 
