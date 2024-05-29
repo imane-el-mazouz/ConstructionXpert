@@ -1069,8 +1069,6 @@
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;

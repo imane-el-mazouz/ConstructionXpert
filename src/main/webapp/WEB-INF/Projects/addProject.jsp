@@ -1091,11 +1091,11 @@
 <form action="${pageContext.request.contextPath}/AddProjectServlet?projectId=${project.pId}" method="post">
     <div class="form-group">
         <label for="name">Project Name</label>
-        <input type="text" id="name" name="name" required >
+        <input type="text" id="name" name="name" >
     </div>
     <div class="form-group">
         <label for="description">Description:</label>
-        <input id="description" name="description" required>
+        <input id="description" name="description" >
     </div>
     <div class="form-group">
         <label for="startDate">Start Date:</label>
@@ -1103,11 +1103,11 @@
     </div>
     <div class="form-group">
         <label for="endDate">End Date:</label>
-        <input type="date" id="endDate" name="endDate" required>
+        <input type="date" id="endDate" name="endDate" >
     </div>
     <div class="form-group">
         <label for="budget">Budget:</label>
-        <input type="text" id="budget" name="budget"  required >
+        <input type="text" id="budget" name="budget"  >
     </div>
 
 
@@ -1157,6 +1157,19 @@
 </footer>
 <script>
 
+    document.addEventListener('name').value('submit' , function (){
+        const name = document.getElementById('name').value ;
+        const nameError = document.getElementById('nameError').value ;
+
+        let isValid = true ;
+
+        nameError.textContent = ""
+
+        if (nameError.value  ){
+            isValid= false ;
+            alert('this name is invalid')
+        }
+    });
 
 </script>
 

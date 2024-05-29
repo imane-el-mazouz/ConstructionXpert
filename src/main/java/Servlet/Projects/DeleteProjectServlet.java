@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 @WebServlet("/DeleteProjectServlet")
 public class DeleteProjectServlet extends HttpServlet {
-    private ProjectDaoImp projectDao;
+      private ProjectDaoImp projectDao;
 
     @Override
     public void init() {

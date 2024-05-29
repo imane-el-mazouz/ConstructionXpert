@@ -1088,6 +1088,15 @@
                     color: #333;
                 }
             }
+            .service-cards .card1 img {
+                width: 50px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                height: 163px;
+            }
+
+
+
 
             #hey {
                 background-color: black;
@@ -1095,7 +1104,27 @@
                 text-align: center;
                 color: #ffcb0f;
             }
-
+            .service-cards .card1, .team-cards .card1 {
+                background: #ffcb0f;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 10px;
+                flex: 1;
+                max-width: 19%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .know-more {
+                background-color: black;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                margin-left: 6px;
+            }
             .contact-info {
                 display: flex;
                 flex-direction: column;
@@ -1985,20 +2014,18 @@
     function shrinkImage(card) {
         card.getElementsByTagName('img')[0].style.transform = "scale(1)";
     }
+    /*
     $(document).ready(function() {
         $('.know-more').on('click', function() {
             alert('More information will be available soon!');
         });
     });
     $(document).ready(function() {
-        // Show all items by default
         $('.gallery-item').show();
 
-        // Filter items on button click
         $('.filter-btn').on('click', function() {
             var filterValue = $(this).attr('data-filter');
 
-            // Remove active class from all buttons
             $('.filter-btn').removeClass('active');
             // Add active class to the clicked button
             $(this).addClass('active');
@@ -2011,6 +2038,8 @@
             }
         });
     });
+
+     */
     document.addEventListener('DOMContentLoaded', () => {
         const reviewsContainer = document.getElementById('reviews-container');
         const reviewCards = document.querySelectorAll('.review-card');
@@ -2020,28 +2049,23 @@
         let currentIndex = 0;
         const totalReviews = reviewCards.length;
 
-        // Function to show the review at the given index
         function showReview(index) {
             const offset = -index * 100;
             reviewsContainer.style.transform = `translateX(${offset}%)`;
         }
 
-        // Show next review
         function nextReview() {
             currentIndex = (currentIndex + 1) % totalReviews;
             showReview(currentIndex);
         }
 
-        // Show previous review
         function prevReview() {
             currentIndex = (currentIndex - 1 + totalReviews) % totalReviews;
             showReview(currentIndex);
         }
 
-        // Auto slide reviews every 5 seconds
         let autoSlide = setInterval(nextReview, 5000);
 
-        // Event listeners for navigation buttons
         nextButton.addEventListener('click', () => {
             nextReview();
             clearInterval(autoSlide);
@@ -2058,16 +2082,13 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         const formMessages = document.getElementById('formMessages');
 
-        // Clear previous messages
         formMessages.textContent = '';
 
-        // Basic validation
         if (name === '' || email === '' || message === '') {
             formMessages.textContent = 'All fields are required.';
             formMessages.className = 'error';

@@ -1085,6 +1085,61 @@
 
 </footer>
 <script>
+  document.getElementById('form-container').addEventListener('submit', function(event) {
+    const nom = document.getElementById('nom').value;
+    const description = document.getElementById('description').value;
+    const startDate = new Date(document.getElementById('startDate').value);
+    const endDate = new Date(document.getElementById('EndDate').value);
+    const budget = document.getElementById('budget').value;
+
+    const nomError = document.getElementById('nomError');
+    const descriptionError = document.getElementById('descriptionError');
+    const dateDebutError = document.getElementById('dateDebutError');
+    const dateFinError = document.getElementById('dateFinError');
+    const budgetError = document.getElementById('budgetError');
+
+    let isValid = true;
+
+    nomError.textContent = "";
+    descriptionError.textContent = "";
+    dateDebutError.textContent = "";
+    dateFinError.textContent = "";
+    budgetError.textContent = "";
+
+    if (nom.trim() === "") {
+      nomError.textContent = "Ce champ est requis";
+      isValid = false;
+    }
+
+    if (description.trim() === "") {
+      descriptionError.textContent = "Ce champ est requis";
+      isValid = false;
+    }
+
+    if (!startDate || isNaN(startDate.getTime())) {
+      dateDebutError.textContent = "Veuillez sélectionner une date de début valide";
+      isValid = false;
+    }
+
+    if (!endDate || isNaN(endDate.getTime())) {
+      dateFinError.textContent = "Veuillez sélectionner une date de fin valide";
+      isValid = false;
+    }
+
+    if (startDate >= endDate) {
+      dateFinError.textContent = "La date de fin doit être après la date de début";
+      isValid = false;
+    }
+
+    if (isNaN(parseFloat(budget)) || parseFloat(budget) <= 0) {
+      budgetError.textContent = "Le budget doit être un nombre positif";
+      isValid = false;
+    }
+
+    if (!isValid) {
+      event.preventDefault();
+    }
+  });
 
 
 </script>
